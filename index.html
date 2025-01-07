@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybór Opcji</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Krok 1 (Gender) -->
+        <div class="step" id="step1" style="display: block;">
+            <header class="header">
+                <h1>Wybierz opcję</h1>
+                <p>Wybierz preferowaną formę kontaktu</p>
+            </header>
+
+            <nav class="image-buttons-group">
+                <button class="image-button" data-option="male">
+                    <img src="https://plaza.universe.ehost.pl/strona-Mnemosline/wp-content/uploads/male-2.png" alt="Mężczyzna">
+                    <div class="image-button-content">
+                        <h3>Mężczyzna</h3>
+                        
+                    </div>
+                </button>
+                <button class="image-button" data-option="female">
+                    <img src="https://plaza.universe.ehost.pl/strona-Mnemosline/wp-content/uploads/female-1.png" alt="Kobieta">
+                    <div class="image-button-content">
+                        <h3>Kobieta</h3>
+                        
+                    </div>
+                </button>
+            </nav>
+
+            <div class="navigation-buttons">
+                <button class="nav-button next">›</button>
+            </div>
+        </div>
+
+        <!-- Krok 2 (Grid) -->
+        <div class="step" id="step2" style="display: none;">
+            <header class="header">
+                <h1>Wybierz jedną lub więcej opcji</h1>
+                <p>Możesz wybrać kilka opcji, które Cię interesują</p>
+            </header>
+
+            <nav class="buttons-group grid">
+                <button class="select-button" data-view-id="opt1">Opcja 1</button>
+                <button class="select-button" data-view-id="opt2">Opcja 2</button>
+                <button class="select-button" data-view-id="opt3">Opcja 3</button>
+                <button class="select-button" data-view-id="opt4">Opcja 4</button>
+                <button class="select-button" data-view-id="opt5">Opcja 5</button>
+                <button class="select-button" data-view-id="opt6">Opcja 6</button>
+            </nav>
+
+            <div class="navigation-buttons">
+                <button class="nav-button prev">‹</button>
+                <button class="nav-button next">›</button>
+            </div>
+        </div>
+
+        <!-- Krok 3 (Przyciski w rzędku) -->
+        <div class="step" id="step3" style="display: none;">
+            <header class="header">
+                <h1>Wybierz jedną opcję</h1>
+                <p>Wybierz opcję, która najlepiej opisuje Twoją sytuację</p>
+            </header>
+
+            <nav class="buttons-group">
+                <button class="select-button" data-view-id="view1">Opcja 1</button>
+                <button class="select-button" data-view-id="view2">Opcja 2</button>
+                <button class="select-button" data-view-id="view3">Opcja 3</button>
+            </nav>
+
+            <div class="navigation-buttons">
+                <button class="nav-button prev">‹</button>
+                <button class="nav-button next">›</button>
+            </div>
+        </div>
+
+        <!-- Krok 4 (Pierwszy slider) -->
+        <div class="step" id="step4" style="display: none;">
+            <header class="header">
+                <h1>Jak oceniasz swoją sytuację?</h1>
+                <p>Określ poziom swojego zainteresowania</p>
+            </header>
+
+            <div class="slider-container">
+                <input type="range" 
+                       min="1" 
+                       max="5" 
+                       value="3" 
+                       class="custom-slider" 
+                       id="situationSlider">
+                
+                <div class="slider-labels">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <div class="slider-message"></div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="nav-button prev">‹</button>
+                <button class="nav-button next">›</button>
+            </div>
+        </div>
+
+        <!-- Krok 5 (Drugi slider) -->
+        <div class="step" id="step5" style="display: none;">
+            <header class="header">
+                <h1>Jak często możesz wykonywać ćwiczenia?</h1>
+                <p>Określ swoją dostępność czasową</p>
+            </header>
+
+            <div class="slider-container">
+                <input type="range" 
+                       min="1" 
+                       max="5" 
+                       value="3" 
+                       class="custom-slider" 
+                       id="frequencySlider">
+                
+                <div class="slider-labels">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <div class="slider-message"></div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="nav-button prev">‹</button>
+                <button class="nav-button next">›</button>
+            </div>
+        </div>
+
+        <!-- Krok 6 (Podsumowanie) -->
+        <div class="step" id="step6" style="display: none;">
+            <header class="header">
+                <h1>Twoja spersonalizowana kuracja</h1>
+                <p>Na podstawie Twoich odpowiedzi przygotowaliśmy następującą propozycję:</p>
+            </header>
+
+            <div class="summary-container">
+                <div class="treatment-info">
+                    <h2>Nazwa kuracji: <span class="treatment-name">Standard Plus</span></h2>
+                    <p>Długość kuracji: <span class="treatment-duration">6 tygodni</span></p>
+                    <p>Częstotliwość: <span class="treatment-frequency">3 razy w tygodniu</span></p>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-button" id="sendEmail">Wyślij na email</button>
+                    <button class="action-button" id="restartQuiz">Zacznij od nowa</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="feedback"></div>
+    <div class="legal-notice">
+        Mnemosline © 2025 Wszelkie prawa zastrzeżone.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
